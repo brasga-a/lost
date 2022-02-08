@@ -10,7 +10,7 @@ Material:
   m_Name: GreenLight
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 2
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -74,6 +74,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.08376962, g: 1, b: 0.09469237, a: 1}
-    - _EmissionColor: {r: 0.66383475, g: 7.924529, b: 0.75039244, a: 1}
+    - _Color: {r: 0.22352941, g: 1, b: 0.22352941, a: 1}
+    - _EmissionColor: {r: 0.5019608, g: 5.992157, b: 0.627451, a: 1}
   m_BuildTextureStacks: []
