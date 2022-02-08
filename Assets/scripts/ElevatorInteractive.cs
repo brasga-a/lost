@@ -15,6 +15,9 @@ public class ElevatorInteractive : MonoBehaviour
     [SerializeField] private Material m_lightRed;
     [SerializeField] private Material m_lightOff;
 
+    [Header("Canvas")]
+    [SerializeField] private Transform canvas;
+
     bool m_isUp;
 
     float currCountdownValue;
@@ -42,14 +45,27 @@ public class ElevatorInteractive : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                ElevatorLightLogic(m_turnOn, m_lightGreen);
-                ElevatorLightLogic(m_turnOff, m_lightOff);
-                StartCoroutine(CountdownElevator(m_timer));
-            }
+            ElevatorController(other);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            canvas.gameObject.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            canvas.gameObject.SetActive(false);
+        }
+    }
+
+
 
     private void ElevatorController(Collider col)
     {
